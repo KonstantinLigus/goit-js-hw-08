@@ -42,6 +42,8 @@ function onSubmitClick(event) {
   event.preventDefault();
   console.log('email:', feedbackFormState.email);
   console.log('message:', feedbackFormState.message);
+  feedbackFormState.email = '';
+  feedbackFormState.message = '';
   localStorage.removeItem('feedback-form-state');
   event.currentTarget.reset();
 }
